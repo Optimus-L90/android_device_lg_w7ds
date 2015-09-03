@@ -1,3 +1,12 @@
 [
-  
+ {
+   "repository": "SlimRoms/android_device_qcom_common",
+   "target_path": "device/qcom/common"
+   "branch":      "lp5.1"
+ }  
+ 
+ { "repository": "SlimRoms/hardware_qcom_fm
+   "target_path": "hardware/qcom/fm"
+   "branch":      "lp5.1" 
+ }
 ]
