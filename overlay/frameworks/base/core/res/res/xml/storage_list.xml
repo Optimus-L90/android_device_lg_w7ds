@@ -41,13 +41,15 @@
     <storage android:storageDescription="@string/storage_internal"
              android:emulated="true"
              android:primary="true"
-             android:mtpReserve="100" />
+             android:mtpReserve="100"
+			 android:allowMassStorage="true" />
 
     <!-- external SD card storage -->
     <storage android:mountPoint="/storage/sdcard1"
              android:storageDescription="@string/storage_sd_card"
              android:primary="false"
              android:removable="true" 
-             android:maxFileSize="4096" />
+             android:maxFileSize="4096"
+             android:allowMassStorage="true" />
 
 </StorageList>
