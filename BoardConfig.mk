@@ -170,6 +170,17 @@ EXTENDED_FONT_FOOTPRINT := true
 # Nfc
 BOARD_NFC_CHIPSET := pn547
 
+# Liquid stuff
+LIQUID_CHANGELOG := true
+LIQUIFY := true
+
+# You might have to set it to 4.9
+# Kernel Toolchain
+KERNEL_TOOLCHAIN := $(ANDROID_BUILD_TOP)/prebuilts/gcc/$(HOST_OS)-x86/arm/arm-eabi-5.2/bin
+KERNEL_TOOLCHAIN_PREFIX := arm-eabi-
+
+# Rom Toolchain
+TARGET_GCC_VERSION_EXP := 4.9
 # Power
 TARGET_POWERHAL_VARIANT := qcom
 
