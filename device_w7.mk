@@ -13,10 +13,10 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
-# Inherit from those products. Most specific first.
-$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
-$(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
+
 $(call inherit-product, frameworks/native/build/phone-xhdpi-1024-dalvik-heap.mk)
+
+$(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 
 # Specific overlay
 DEVICE_PACKAGE_OVERLAYS += device/lge/w7/overlay
@@ -44,6 +44,7 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.telephony.gsm.xml:system/etc/permissions/android.hardware.telephony.gsm.xml \
     frameworks/native/data/etc/android.hardware.telephony.cdma.xml:system/etc/permissions/android.hardware.telephony.cdma.xml \
     frameworks/native/data/etc/android.hardware.audio.low_latency.xml:system/etc/permissions/android.hardware.audio.low_latency.xml \
+    frameworks/native/data/etc/android.hardware.bluetooth_le.xml:system/etc/permissions/android.hardware.bluetooth_le.xml \
     frameworks/native/data/etc/android.hardware.nfc.xml:system/etc/permissions/android.hardware.nfc.xml \
     frameworks/native/data/etc/android.hardware.nfc.hce.xml:system/etc/permissions/android.hardware.nfc.hce.xml \
     frameworks/native/data/etc/com.android.nfc_extras.xml:system/etc/permissions/com.android.nfc_extras.xml \
@@ -81,8 +82,10 @@ PRODUCT_COPY_FILES += \
     device/lge/w7/prebuilt/etc/wifi/WCNSS_qcom_wlan_nv.bin:system/etc/firmware/wlan/prima/WCNSS_qcom_wlan_nv_boot.bin \
     device/lge/w7/prebuilt/etc/wifi/WCNSS_qcom_wlan_nv.bin:system/etc/wifi/WCNSS_qcom_wlan_nv.bin \
     device/lge/w7/prebuilt/etc/wifi/WCNSS_qcom_wlan_nv.bin:system/etc/wifi/WCNSS_qcom_wlan_nv_boot.bin \
-    device/lge/w7/prebuilt/etc/wifi/WCNSS_qcom_cfg.ini:system/etc/wifi/WCNSS_qcom_cfg.ini
-
+    device/lge/w7/prebuilt/etc/wifi/WCNSS_qcom_cfg.ini:system/etc/wifi/WCNSS_qcom_cfg.ini \
+    device/lge/w7/prebuilt/etc/com.cyanogenmod.nfc.enhanced.xml:system/etc/permissions/com.cyanogenmod.nfc.enhanced.xml \
+    device/lge/w7/prebuilt/etc/nfc_nci.pn54x.default.so:system/etc/lib/hw/nfc_nci.pn54x.default.so
+    
 # Ramdisk
 PRODUCT_COPY_FILES += \
     device/lge/w7/rootdir/fstab.w7:root/fstab.w7 \
@@ -146,8 +149,8 @@ PRODUCT_PACKAGES += \
     com.android.future.usb.accessory
 
 # Keyhandler
-PRODUCT_PACKAGES += \
-    com.cyanogenmod.keyhandler
+# PRODUCT_PACKAGES += \
+#    com.cyanogenmod.keyhandler
 
 # Crda
 PRODUCT_PACKAGES += \
@@ -363,6 +366,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Screen density
 PRODUCT_AAPT_CONFIG := normal hdpi xhdpi
 PRODUCT_AAPT_PREF_CONFIG := xhdpi
+
+# Doze
+PRODUCT_PACKAGES += \
+    LGEDoze
 
 $(call inherit-product, vendor/lge/w7/w7-vendor.mk)
 

@@ -1,2 +1,2 @@
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/device_w7.mk
+    $(LOCAL_DIR)/aosp_w7.mk
