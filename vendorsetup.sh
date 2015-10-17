@@ -21,4 +21,7 @@
 # function: add_lunch_combo generic-eng
 
 add_lunch_combo carbon_w7-userdebug
-
+add_lunch_combo aosp_w7-userdebug
+add_lunch_combo slim_w7-userdebug
+add_lunch_combo liquid-userdebug
+add_lunch_combo orion_w7-userdebug

@@ -1,0 +1,26 @@
+From 3e61f34239fea407803dc9d95d7ca26cc61c7092 Mon Sep 17 00:00:00 2001
+From: batlin1977 <batlin1977@gmail.com>
+Date: Sun, 6 Sep 2015 20:29:14 +0200
+Subject: [PATCH] build patch
+
+Change-Id: I45a3977e814f069a52f4c5da82cebb3924c2146e
+---
+ target/product/core_minimal.mk | 2 ++
+ 1 file changed, 2 insertions(+)
+
+diff --git a/target/product/core_minimal.mk b/target/product/core_minimal.mk
+index 89b1cba..e1b0112 100644
+--- a/target/product/core_minimal.mk
++++ b/target/product/core_minimal.mk
+@@ -74,6 +74,8 @@ PRODUCT_PACKAGES += \
+     uncrypt \
+     voip-common \
+     webview \
++    libwebviewchromium_plat_support \
++    libwebviewchromium_loader \
+     wifi-service
+ 
+ PRODUCT_COPY_FILES += \
+-- 
+1.9.1
+
