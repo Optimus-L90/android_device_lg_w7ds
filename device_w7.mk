@@ -152,7 +152,7 @@ PRODUCT_PACKAGES += \
 
 # Keystore
 PRODUCT_PACKAGES += \
-    keystore.msm8226
+#    keystore.msm8226
 
 # Crda
 PRODUCT_PACKAGES += \
@@ -224,8 +224,8 @@ PRODUCT_PACKAGES += \
     mkfs.f2fs \
     fsck.f2fs \
     fibmap.f2fs \
-    wcnss_service \
-    librmnetctl
+    wcnss_service
+#    librmnetctl
 
 # Opengles version 3
 PRODUCT_PROPERTY_OVERRIDES += \
