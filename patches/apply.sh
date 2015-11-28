@@ -62,7 +62,6 @@ patches=$PWD
 cd $LOCAL_PATH
 
 pre_clean build
-pre_clean libcore
 
 cd $patches
 
@@ -73,4 +72,3 @@ cd $LOCAL_PATH
 # now apply it 
 
 apply_all build
-apply_all libcore
